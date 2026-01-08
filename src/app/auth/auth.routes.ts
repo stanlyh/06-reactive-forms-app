@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { RegisterPageComponent } from "./register-page/register-page.component";
+import { RegisterPageComponent } from "./pages/register-page/register-page.component";
 
 
 
@@ -12,8 +12,13 @@ export const authRoutes: Routes = [
       {
         path: 'sign-up',
         component: RegisterPageComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'sign-up'
       }
     ]
   }
+];
 
-]
+export default authRoutes;
